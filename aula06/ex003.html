@@ -21,10 +21,12 @@
     <p>Já me livrei da maldição!!</p>
 
     <script>
-        var n1 = Number.parseInt(window.prompt('Digite um número: '))
-        var n2 = Number.parseInt(window.prompt('Digite outro um número: '))
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro um número: '))
         var s = n1 + n2
-        window.alert('a soma dos valores é ' + s)
+        window.alert('a soma dos valores é ' + String(s))
+        //(number + number) para adição
+        //(string + string) para concatenação
 
     </script>
 </body>

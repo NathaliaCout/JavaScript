@@ -7,7 +7,7 @@
     <style>
         body{
             background-color: rgb(170, 127, 211);
-            color: white;
+            color: white; /* comentárioem css */
             font: normal 20pt Arial;
         }
 
@@ -17,13 +17,15 @@
     </style>
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
+    <h1>Olá, mundo!</h1> <!--comentário em html -->
     <p>Já me livrei da maldição!!</p>
 
     <script>
-        window.alert("Minha primeira mensagem!")
-        window.confirm("Está gostando de JS?") // janela com botão OK e Cancelar
-        window.prompt("Qual é seu nome?")
+        var n1 = Number.parseInt(window.prompt('Digite um número: '))
+        var n2 = Number.parseInt(window.prompt('Digite outro um número: '))
+        var s = n1 + n2
+        window.alert('a soma dos valores é ' + s)
+
     </script>
 </body>
 </html>

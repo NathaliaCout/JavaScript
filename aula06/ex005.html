@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background: rgb(91, 157, 243);
+            color: white;
+            font: normal 18pt Arial;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div> <!-- Div com ID que será manipulada pelo JavaScript -->
+
+    <script>
+        // Escreve mensagens diretamente no corpo da página
+        window.document.write('Olá, Mundo! <br>') // Adiciona texto e uma quebra de linha
+
+        window.document.write(window.navigator.appName + '<br>')// Mostra o nome do navegador
+
+        window.document.write(window.document.URL + '<br>') // Exibe a URL da página atual
+
+
+         // Obtém o elemento <body> e o segundo <p> (indexado em 1)
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        // Comentados, mas explicados para referência:
+        // window.document.write('Está escrito assim: ' + p1.innerText); // Exibe o texto do segundo <p>
+        // p1.style.color = 'blue'; // Muda a cor do texto do segundo <p> para azul
+        // corpo.style.background = 'black'; // Altera a cor de fundo do body para preto
+
+        // document.write(p1.innerHTML); // Exibe o HTML interno do segundo <p>, incluindo tags filhas
+            
+        // document.write(p1.innerText); // Exibe apenas o texto do segundo <p>, sem nenhuma formatação ou tags filhas
+        // window.alert(p1.innerText); // Mostra o texto puro do segundo <p> em um alerta
+
+
+         // Manipulação de elementos pelo ID
+        /*
+            var d = window.document.getElementById('msg');
+            d.style.background = 'green' ;   // Altera o fundo do elemento com ID 'msg' para verde
+            d.innerText = 'Estou aguardando...'; // Atualiza o texto do elemento
+        */
+
+        // Alternativa mais direta:
+        // window.document.getElementById('msg').innerText = 'Olá!';
+
+        
+        //Seleção por nome (atributo name, não usado no exemplo)
+        /* 
+            var d = window.document.getElementsByName('msg')[0]; 
+            d.innerText = 'Olá'; // Atualiza o texto do primeiro elemento com atributo name='msg'
+        /*
+
+        // Seleção por classe
+        /* 
+        var d = window.document.getElementsByClassName('msg')[0];
+        d.innerText = 'usando classe'; // Atualiza o texto do primeiro elemento com a classe 'msg'
+        */
+
+        // Seleção por seletor CSS (mais flexível)
+        var d = window.document.querySelector('div#msg');// Seleciona o elemento <div> com ID 'msg'
+        d.style.background = 'blue'; // Muda a cor de fundo da div para azul
+    </script>
+
+</body>
+</html>

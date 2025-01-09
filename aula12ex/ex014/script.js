@@ -5,20 +5,23 @@ function carregar(){
     var data = new Date()
     var hora = data.getHours()
 
-    var hora = 7
+    //var hora = 22
 
     msg.innerHTML = `Agora são ${hora} horas.`
 
     if (hora >=0 && hora < 12){
         //bom dia
-        img.src = 'fotomanha.png"'
+        img.src = 'fotomanha.png'
+        document.body.style.background = '#fde8c9'
 
-    } else if (hora >=12 && hora < 18){
+    } else if (hora >=12 && hora <= 18){
         //boa tarde
         img.src = 'fototarde.png'
+        document.body.style.background = '#b47d6b'
     }else {
         //boa noite
         img.src = 'fotonoite.png'
+        document.body.style.background = '#172e49'
     }
 
 }

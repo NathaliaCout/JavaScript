@@ -4,10 +4,12 @@ function carregar(){
 
     var data = new Date()
     var hora = data.getHours()
+    var minu = data.getMinutes()
+    //var minu = 7
+    //var hora = 7
+    minu = minu.toString().padStart(2,'0')    
 
-    //var hora = 22
-
-    msg.innerHTML = `Agora são ${hora} horas.`
+    msg.innerHTML = `Agora são ${hora} horas e ${minu} minutos.`
 
     if (hora >=0 && hora < 12){
         //bom dia
